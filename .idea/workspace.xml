@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f34641d3-517b-4de0-864d-ee8404b6b8b2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/css/app.73023d825ce94a85bd53091a4f8f0ef9.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/fonts/element-icons.6f0a763.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/img/404.a57b6f3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/0.f841294e707f3a841765.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/1.5357b0bf9187830c82a7.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/2.7e95decda16502bd3ff8.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/3.03a5bb0f6bea7b0ce54b.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/4.b9fc2fb6c7dad93fdb19.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/5.13089bce87c9774afbba.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/6.12260f762453de79a5da.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/7.afdb72e32542aa5fbad9.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/8.2d7a9b80ef96cb1b7de5.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/app.eab54f19551be6bdcd5e.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/manifest.219d57fc5648a9c0e1fb.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/static/js/vendor.dda8bd782e333ec513aa.js" afterPath="" />
-    </list>
+    <list default="true" id="f34641d3-517b-4de0-864d-ee8404b6b8b2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -174,12 +155,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531205209116</updated>
-      <workItem from="1531205210388" duration="2681000" />
+      <workItem from="1531205210388" duration="3987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2681000" />
+    <option name="totallyTimeSpent" value="3987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1104" extended-state="6" />

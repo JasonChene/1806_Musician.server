@@ -11,6 +11,8 @@ AV.Cloud.define('setRole', function(request, res) {
 
     verifyLogin(request, res, function (currentUser) {
 
+        console.log('发起请求的当前用户---', currentUser);
+
         currentUser.getRoles().then(function (value) {
             var admins = [];
             for(var i=0;i<value.length;i++){
@@ -24,7 +26,7 @@ AV.Cloud.define('setRole', function(request, res) {
                 var update = AV.Object.createWithoutData('_User', userId);
                 update.set('mobilePhoneVerified', true);
                 update.save().then(function (value) {
-                    
+
                     if(role === 'teacher'){
                         nowRole = AV.Object.createWithoutData('_Role', '5b3c4536756571003d5747d1');
                     }else if(role === 'student'){

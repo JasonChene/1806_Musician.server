@@ -12,6 +12,7 @@ var sha1 = require('sha1');
 AV.Cloud.define('setRole', function(request, res) {
 
     var userId = request.params.userId;  //参数－添加用户的id
+    var accid = request.params.accid; //网易云通信id
     var role = request.params.role;　//参数－要设置的角色teacher或student
     var nowRole;
 
@@ -39,7 +40,10 @@ AV.Cloud.define('setRole', function(request, res) {
                     nowRole.getUsers().add(value);
                     nowRole.save().then(function (data) {
                         console.log('设置用户角色成功...');
-                        return res.success({status:true, data:'设置用户角色成功...'});
+
+                        //这里开始注册网易云通信id
+                        return creatWYUser(res, accid, userId);
+                        // return res.success({status:true, data:'设置用户角色成功...'});
                     }, function (reason) {
                         console.log('设置用户角色失败!', reason)
                     })
@@ -64,6 +68,7 @@ AV.Cloud.define('mobileSetRole', function (request, res) {
     var nowRole;
     //验证注册用户登录
     verifyLogin(request, res, function (currentUser) {
+        var userId = currentUser.id;
         currentUser.getRoles().then(function (roles) {
 
             if(roles.length == 0){
@@ -78,7 +83,7 @@ AV.Cloud.define('mobileSetRole', function (request, res) {
                 nowRole.save().then(function (value) {
                     console.log('设置用户角色成功');
                     //这里开始注册网易云通信id
-                    return creatWYUser(res, accid);
+                    return creatWYUser(res, accid, userId);
                 }, function (reason) {
                     console.log('设置用户角色失败　' + reason);
                     return res.success({status: 400, data: '设置用户角色失败' + reason})
@@ -93,7 +98,7 @@ AV.Cloud.define('mobileSetRole', function (request, res) {
 });
 
 
-function creatWYUser(res, accid) {
+function creatWYUser(res, accid, userId) {
 
     var tmp = Date.parse( new Date() ).toString();
     tmp = tmp.substr(0,10);  //时间戳（精确到秒）
@@ -115,8 +120,15 @@ function creatWYUser(res, accid) {
 
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
-        console.log(body);
-        return res.success({status: 200, data: JSON.parse(body).info});
+        console.log('创建网易云信用户id成功:', body);
+
+        var userInfoUpdate = AV.Object.createWithoutData('_User', userId);
+        userInfoUpdate.set('netEaseUserInfo', JSON.parse(body).info);
+        userInfoUpdate.save().then(function (result) {
+            return res.success({status: 200, data: JSON.parse(body).info});
+        }, function (reason) {
+            console.log('保存网易云信用户数据失败', reason);
+        });
     });
 }
 

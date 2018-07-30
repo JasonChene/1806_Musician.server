@@ -12,7 +12,7 @@ var sha1 = require('sha1');
 AV.Cloud.define('setRole', function(request, res) {
 
     var userId = request.params.userId;  //参数－添加用户的id
-    var accid = request.params.accid; //网易云通信id
+    // var accid = request.params.accid; //网易云通信id
     var role = request.params.role;　//参数－要设置的角色teacher或student
     var nowRole;
 
@@ -42,7 +42,7 @@ AV.Cloud.define('setRole', function(request, res) {
                         console.log('设置用户角色成功...');
 
                         //这里开始注册网易云通信id
-                        return creatWYUser(res, accid, userId);
+                        return creatWYUser(res, userId);
                         // return res.success({status:true, data:'设置用户角色成功...'});
                     }, function (reason) {
                         console.log('设置用户角色失败!', reason)
@@ -64,7 +64,7 @@ AV.Cloud.define('setRole', function(request, res) {
 AV.Cloud.define('mobileSetRole', function (request, res) {
 
     var role = request.params.role; //leancloud创建的角色
-    var accid = request.params.accid; //网易云通信id
+    // var accid = request.params.accid; //网易云通信id
     var nowRole;
     //验证注册用户登录
     verifyLogin(request, res, function (currentUser) {
@@ -83,7 +83,7 @@ AV.Cloud.define('mobileSetRole', function (request, res) {
                 nowRole.save().then(function (value) {
                     console.log('设置用户角色成功');
                     //这里开始注册网易云通信id
-                    return creatWYUser(res, accid, userId);
+                    return creatWYUser(res, userId);
                 }, function (reason) {
                     console.log('设置用户角色失败　' + reason);
                     return res.success({status: 400, data: '设置用户角色失败' + reason})
@@ -98,7 +98,7 @@ AV.Cloud.define('mobileSetRole', function (request, res) {
 });
 
 
-function creatWYUser(res, accid, userId) {
+function creatWYUser(res, userId) {
 
     var tmp = Date.parse( new Date() ).toString();
     tmp = tmp.substr(0,10);  //时间戳（精确到秒）
@@ -116,7 +116,7 @@ function creatWYUser(res, accid, userId) {
                 curtime: tmp,
                 nonce: nonce,
                 appkey: '34b421cf05779d2ddcfe1a1ae66035d1' },  //appkey
-        form: { accid: accid, name: accid } };
+        form: { accid: userId, name: userId } };
 
     request(options, function (error, response, body) {
         if (error) throw new Error(error);

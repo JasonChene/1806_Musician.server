@@ -9,14 +9,14 @@ var sha1 = require('sha1');
  */
 
 //cms端设置用户角色
-AV.Cloud.define('setRole', function(request, res) {
+AV.Cloud.define('setRole', function(req, res) {
 
-    var userId = request.params.userId;  //参数－添加用户的id
+    var userId = req.params.userId;  //参数－添加用户的id
     // var accid = request.params.accid; //网易云通信id
-    var role = request.params.role;　//参数－要设置的角色teacher或student
+    var role = req.params.role;　//参数－要设置的角色teacher或student
     var nowRole;
 
-    verifyLogin(request, res, function (currentUser) {
+    verifyLogin(req, res, function (currentUser) {
 
         currentUser.getRoles().then(function (value) {
             var admins = [];

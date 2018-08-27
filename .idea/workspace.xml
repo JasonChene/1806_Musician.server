@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f34641d3-517b-4de0-864d-ee8404b6b8b2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cloud.js" afterPath="$PROJECT_DIR$/cloud.js" />
-    </list>
+    <list default="true" id="f34641d3-517b-4de0-864d-ee8404b6b8b2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,8 +17,8 @@
       <file leaf-file-name="cloud.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloud.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1494">
-              <caret line="85" column="48" lean-forward="true" selection-start-line="85" selection-start-column="48" selection-end-line="85" selection-end-column="48" />
+            <state relative-caret-position="2214">
+              <caret line="125" column="69" lean-forward="true" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
               <folding>
                 <element signature="e#97#118#0" expanded="false" />
               </folding>
@@ -179,12 +176,12 @@
       <workItem from="1532745717103" duration="4378000" />
       <workItem from="1532936482868" duration="1032000" />
       <workItem from="1533281832323" duration="81000" />
-      <workItem from="1534493157651" duration="2474000" />
+      <workItem from="1534493157651" duration="3934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34834000" />
+    <option name="totallyTimeSpent" value="36294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1104" extended-state="6" />
@@ -442,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cloud.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1494">
-          <caret line="85" column="48" lean-forward="true" selection-start-line="85" selection-start-column="48" selection-end-line="85" selection-end-column="48" />
+        <state relative-caret-position="2214">
+          <caret line="125" column="69" lean-forward="true" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
           <folding>
             <element signature="e#97#118#0" expanded="false" />
           </folding>
